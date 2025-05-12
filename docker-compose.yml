@@ -13,7 +13,6 @@ services:
       - ./rbmq_image/conf/rabbitmq.conf:/etc/rabbitmq/rabbitmq.conf
       - ./rbmq_image/conf/enabled_plugins:/etc/rabbitmq/enabled_plugins
       - ./rbmq_image/conf/definitions.json:/etc/rabbitmq/definitions.json
-
     networks:
       - custom_network
 
@@ -52,18 +51,16 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: "root"
 
-
-
   nginx:
     image: nginx:1.28.0
     container_name: nginx
     volumes:
       - ./nginx_image:/etc/nginx/conf.d
     ports:
-      - "6001:6001"
+      - "80:80"
     environment:
-      - NGINX_HOST=foobar.com
-      - NGINX_PORT=6001
+      - NGINX_HOST=haj-ebram.ir
+      - NGINX_PORT=80
 
 networks:
   custom_network:
