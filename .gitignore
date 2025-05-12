@@ -1,0 +1,5 @@
+
+# Ignore all files in the influx_data directory
+influx_data/*
+# Ignore all files in the mysql_data directory
+mysql_data/*
