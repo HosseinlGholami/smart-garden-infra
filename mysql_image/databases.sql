@@ -1,1 +1,2 @@
+CREATE DATABASE IF NOT EXISTS `smart_garden`;
 CREATE DATABASE IF NOT EXISTS `django-app-db`;
